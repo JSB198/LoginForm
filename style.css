@@ -1,0 +1,315 @@
+/* BASIC CSS FILE SETUP */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --lightBlue: #37ADDB;
+    --backgroundWhite: #E6E6E6;
+    --formWhite: #FFFFFF;
+    --labelGray: #BDBDBD;
+    --textGray: #333333;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--textGray);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--backgroundWhite);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ALTER BELOW AS NEEDED */
+.content-container {
+    height: 590px;
+    display: flex;
+}
+
+.content-container-left {
+    background-color: var(--lightBlue);
+    width: 200px;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.content-container-right {
+    background-color: var(--formWhite);
+    width: 800px;
+    border-radius: 0px 15px 15px 0px
+}
+
+.form-title-container {
+    margin: 30px 35px 0px 35px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid var(--backgroundWhite);
+}
+
+.form-title-container>h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--lightBlue);
+}
+
+.form-content-container {
+    padding: 40px 35px 0px 35px;
+    width: 100%;
+}
+
+.form-content-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--backgroundWhite);
+    padding-bottom: 12px;
+}
+
+.content-left {
+    width: 47.5%;
+}
+
+.input-100 {
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    margin-bottom: 30px;
+}
+
+#Error_fname {
+    position: absolute;
+    top: 55px;
+    color: red;
+    font-size: 13px;
+
+}
+
+#Error_fname i {
+    position: relative;
+    left: 325px;
+    top: -30px;
+    color: darkgreen;
+
+}
+
+#Error_lname {
+    position: absolute;
+    top: 55px;
+    color: red;
+    font-size: 13px;
+}
+
+#Error_lname i {
+    position: relative;
+    left: 325px;
+    top: -30px;
+    color: darkgreen;
+}
+
+#Error_email {
+    position: absolute;
+    top: 55px;
+    color: red;
+    font-size: 13px;
+
+}
+
+#Error_email i {
+    position: relative;
+    left: 325px;
+    top: -30px;
+    color: darkgreen;
+
+}
+
+#Error_phone {
+    position: absolute;
+    top: 55px;
+    color: red;
+    font-size: 13px;
+}
+
+#Error_phone i {
+    position: relative;
+    left: 325px;
+    top: -30px;
+    color: darkgreen;
+}
+
+#Error_userID {
+    position: absolute;
+    top: 55px;
+    color: red;
+    font-size: 13px;
+}
+
+#Error_userID i {
+    position: relative;
+    left: 325px;
+    top: -30px;
+    color: black;
+}
+
+#Error_userRef {
+    position: absolute;
+    top: 55px;
+    color: red;
+    font-size: 13px;
+}
+
+#Error_userRef i {
+    position: relative;
+    left: 325px;
+    top: -30px;
+    color: darkgreen;
+}
+.form-content-bottom{
+    position: relative;
+}
+#button_Error {
+    position: absolute;
+    top: 40px;
+    color: red;
+    font-size: 13px;
+}
+
+#Error_Dropdown{
+    position: absolute;
+    top: 60px;
+    color: red;
+    font-size: 13px;
+
+}
+
+#Error_Dropdown i {
+    position: relative;
+    left: 355px;
+    top: -30px;
+    color: darkgreen;
+
+}
+.input-100>label {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--labelGray);
+}
+
+.input-100>input,
+select {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1.5px solid var(--backgroundWhite);
+    transition: 0.2s ease-in-out all;
+
+    &:focus {
+        outline: none;
+        border-bottom: 1.5px solid var(--lightBlue);
+
+        +label {
+            color: var(--lightBlue);
+        }
+    }
+}
+
+.content-right {
+    width: 47.5%;
+}
+
+.input-100-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-50 {
+    width: 47.5%;
+}
+
+.right-50 {
+    width: 47.5%;
+}
+
+#userRef {
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+#userRef::placeholder {
+    color: var(--labelGray);
+}
+
+.form-content-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#reset {
+    background-color: var(--formWhite);
+    border: none;
+    color: var(--labelGray);
+    font-size: 1rem;
+    transition: 0.3s ease-in-out all;
+}
+
+#reset:hover {
+    color: var(--textGray);
+    cursor: pointer;
+}
+
+#button {
+    padding: 10px 25px;
+    border: none;
+    background-color: var(--lightBlue);
+    color: var(--formWhite);
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out all;
+}
+
+#button:hover {
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#results {
+    padding: 10px 25px;
+    border: none;
+    background-color: var(--lightBlue);
+    color: var(--formWhite);
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out all;
+    margin-bottom: 15px;
+}
+
+#results:hover {
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#result-bod {
+    flex-direction: column;
+}
+
+#home {
+    padding: 10px 25px;
+    border: none;
+    background-color: var(--lightBlue);
+    color: var(--formWhite);
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out all;
+    margin-bottom: 15px;
+}
+
+#home:hover {
+    border-radius: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPR271 - Functional Form</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/5e788e166b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="content-container-left">
+
+        </div>
+        <div class="content-container-right">
+            <div class="form-title-container">
+                <h1>Basic Details</h1>
+            </div>
+            <div class="form-content-container">
+                <form id="form" action="results.html" onsubmit="return ValidateForm()" method="get">
+                    <div class="form-content-top">
+                        <div class="content-left">
+                            <div class="input-100">
+                                <input type="text" name="fName" id="fName" onclick="ValidateFname()"
+                                    onkeyup="ValidateFname()">
+                                <label for="fName">First Name</label>
+                                <span id="Error_fname"></span>
+                            </div>
+                            <div class="input-100">
+                                <input type="email" name="emailId" id="emailId" onclick="ValidateEmail()"
+                                    onkeyup="ValidateEmail()">
+                                <label for="emailId">Email ID</label>
+                                <span id="Error_email"></span>
+                            </div>
+                            <div class="input-100">
+                                <select id="countryDropdown" onchange="updateStates()" onclick="ValidateDropDown()">
+                                    <option value="">Select Country</option>
+                                </select>
+                                <span id = "Error_Dropdown"></span>
+                                <label for="userCountry">Country</label>
+                            </div>
+                            <div class="input-100">
+                                <input type="tel" name="userCell" id="userCell" onclick="ValidatePhone()"
+                                    onkeyup="ValidatePhone()">
+                                <label for="userCell">Cellphone Number</label>
+                                <span id="Error_phone"></span>
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="input-100">
+                                <input type="text" name="lName" id="lName" onclick="ValidateLname()"
+                                    onkeyup="ValidateLname()">
+                                <label for="lName">Last Name</label>
+                                <span id="Error_lname"></span>
+                            </div>
+                            <div class="input-100">
+                                <input type="text" name="userId" id="userId" onclick="ValidateUserID()"
+                                    onkeyup="ValidateUserID()">
+                                <label for="userId">Your User ID</label>
+                                <span id="Error_userID"></span>
+                            </div>
+                            <div class="input-100-container">
+                                <div class="input-100 left-50">
+                                    <select id="stateDropdown" onchange="updateCities()" onclick="ValidateDropDown()">
+                                        <option value="">Select State</option>
+                                    </select>
+                                    <label for="userState">State</label>
+                                </div>
+                                <div class="input-100 right-50">
+                                    <select id="cityDropdown" onclick="ValidateDropDown()">
+                                        <option value="">Select City</option>
+                                    </select>
+                                    <label for="userCity">City</label>
+                                </div>
+                            </div>
+                            <div class="input-100">
+                                <input type="text" name="userRef" id="userRef" placeholder="Reference Code"
+                                    onclick="ValidateUserRef()" onkeyup="ValidateUserRef()">
+                                <span id="Error_userRef"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-content-bottom">
+                        <input type="reset" onclick="resetForm()" value="Reset All" id="reset">
+                        <button id="button">Continue</button>
+                        <span id="button_Error"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript Link -->
+    <script defer src="script.js"></script>
+</body>
+
+</html>
